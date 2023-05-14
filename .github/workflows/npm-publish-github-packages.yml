@@ -19,12 +19,12 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
           scope: '@fmontesi'
-      - uses: actions/setup-java@v2
-        with:
-          java-version: 17
-          distribution: 'temurin'
+      #- uses: actions/setup-java@v2
+#        with:
+#          java-version: 17
+#          distribution: 'temurin'
       - run: npm ci
-      - run: npm run compile
+#      - run: npm run compile
 #      - run: npm test
       - run: npm publish
         env:
