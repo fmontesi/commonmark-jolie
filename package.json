@@ -1,5 +1,5 @@
 {
-  "name": "commonmark-jolie",
+  "name": "@fmontesi/commonmark-jolie",
   "version": "0.1.0",
   "description": "A Jolie library for parsing and rendering Markdown text according to the commonmark specification. Based on commonmark-java.",
   "main": "main.ol",
