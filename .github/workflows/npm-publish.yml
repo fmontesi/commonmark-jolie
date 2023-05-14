@@ -20,12 +20,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+          registry-url: https://registry.npmjs.org
+          always-auth: true
       - uses: actions/setup-java@v2
         with:
           java-version: 17
           distribution: 'temurin'
-      - run: npm ci
-      - run: npm run build
+      - run: npm ci && npm run build
 #      - run: npm test # Requires an actions/setup-jolie first..
       - run: npm publish --access public
         env:
