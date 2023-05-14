@@ -12,6 +12,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -19,13 +22,13 @@ jobs:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
           scope: '@fmontesi'
-      #- uses: actions/setup-java@v2
-#        with:
-#          java-version: 17
-#          distribution: 'temurin'
+      - uses: actions/setup-java@v2
+        with:
+          java-version: 17
+          distribution: 'temurin'
       - run: npm ci
-#      - run: npm run compile
-#      - run: npm test
+      - run: npm run compile
+#      - run: npm test # Requires an actions/setup-jolie first..
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
