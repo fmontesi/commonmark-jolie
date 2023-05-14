@@ -17,7 +17,7 @@
   },
   "license": "LGPL 2.1",
   "scripts": {
-    "compile": "mvn package",
+    "build": "mvn package",
     "test": "jot jot.json"
   },
   "jolie": {
