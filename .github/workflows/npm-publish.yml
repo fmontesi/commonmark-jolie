@@ -27,6 +27,6 @@ jobs:
       - run: npm ci
       - run: npm run compile
 #      - run: npm test # Requires an actions/setup-jolie first..
-      - run: npm publish --public
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
