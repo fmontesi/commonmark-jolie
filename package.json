@@ -1,0 +1,35 @@
+{
+  "name": "commonmark-jolie",
+  "version": "0.1.0",
+  "description": "A Jolie library for parsing and rendering Markdown text according to the commonmark specification. Based on commonmark-java.",
+  "main": "main.ol",
+  "repo": "https://github.com/fmontesi/commonmark-jolie",
+  "keywords": [
+    "jolie",
+    "microservices",
+    "markdown",
+    "commonmark"
+  ],
+  "author": {
+    "name": "Fabrizio Montesi",
+    "email": "famontesi@gmail.com",
+    "url": "https://www.fabriziomontesi.com/"
+  },
+  "license": "LGPL 2.1",
+  "scripts": {
+    "compile": "mvn package",
+    "test": "jot jot.json"
+  },
+  "jolie": {
+    "dependencies": {},
+    "maven": {
+      "dependencies": {
+        "org.commonmark:commonmark": "0.21.0"
+      },
+      "indirectDependencies": {}
+    }
+  },
+  "devDependencies": {
+    "@jolie/jot": "^0.0.17"
+  }
+}

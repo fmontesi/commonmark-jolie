@@ -1,0 +1,6 @@
+node_modules
+target
+src
+test
+.devcontainer
+jot.json
