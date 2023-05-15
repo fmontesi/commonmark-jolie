@@ -3,8 +3,16 @@ A Jolie library for rendering markdown adhering to the commonmark specification,
 
 # Installation
 
+If you have JPM installed:
+
 ```
 jpm install @jolie/commonmark
+```
+
+If you do not have JPM installed:
+
+```
+npx @jolie/jpm install @jolie/commonmark
 ```
 
 # Usage
