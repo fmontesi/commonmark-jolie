@@ -1,0 +1,19 @@
+name: Compile and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: jolie/setup-jolie@v1
+      - name: Build
+        run: jpm install && npm run build
+      - name: Test
+        run: npm run test
